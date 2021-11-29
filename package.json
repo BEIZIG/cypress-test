@@ -1,0 +1,34 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "Foncia Technical Test",
+  "main": "index.js",
+  "scripts": {
+	"clean:reports": "rmdir /S /Q cypress/report && mkdir cypress/report && mkdir cypress/mochawesome-report/",
+    "pretest": "rimraf -r ./cypress/report/*json",
+	"scripts": "cypress run",
+	"test": "npm cypress run || npm run posttest",
+    "combine-reports": "npx mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json",
+    "generate-report": "npx marge cypress/report/output.json --reportDir ./ --inline",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://BEIZIG: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@github.com/BEIZIG/cypress-test.git"
+  },
+  "keywords": [],
+  "author": "BEIZIG Mohamed Amine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BEIZIG/cypress-test/issues"
+  },
+  "homepage": "https://github.com/BEIZIG/cypress-test#readme",
+  "dependencies": {
+    "cypress": "^9.1.0"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0"
+  }
+}

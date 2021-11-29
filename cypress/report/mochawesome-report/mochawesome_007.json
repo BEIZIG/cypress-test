@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-29T09:54:56.464Z",
+    "end": "2021-11-29T09:55:12.881Z",
+    "duration": 16417,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "49be6193-3bb2-4ff1-adcf-2326d76a0ce2",
+      "title": "",
+      "fullFile": "cypress/integration/TC02_HomePageVerification.js",
+      "file": "cypress/integration/TC02_HomePageVerification.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "47989843-7c60-4136-948c-08b4233e3ad8",
+          "title": "01_Homepage Verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Load page",
+              "fullTitle": "01_Homepage Verification Load page",
+              "timedOut": null,
+              "duration": 11837,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Example of error : Timed out after waiting 60000ms to load.\ncy.visit('https://fr.foncia.com//'); //Remove gestion des Cookies popup\ncy.get('body > app-root > app-cookie-banner > div.cookie-container-cta > div > app-foncia-button > button').click();",
+              "err": {},
+              "uuid": "88415bfa-0f13-4dc2-a4c0-8cb7ad3f5936",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Logo",
+              "fullTitle": "01_Homepage Verification Check Logo",
+              "timedOut": null,
+              "duration": 183,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//logo exist\ncy.get('body > app-root > app-header > header > div.header-logo > a > img').should('be.visible');",
+              "err": {},
+              "uuid": "77049eb1-c882-40bb-8457-8a77473c0508",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Menu button",
+              "fullTitle": "01_Homepage Verification Check Menu button",
+              "timedOut": null,
+              "duration": 798,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Menu button exist\ncy.get('body > app-root > app-header > header > div.header-button.header-button-mobile > p-button > button > span.p-button-label.ng-star-inserted').should('be.visible'); //Once you click on Menu button\ncy.get('body > app-root > app-header > header > div.header-button.header-button-mobile > p-button > button > span.p-button-label.ng-star-inserted').click(); //Acheter option should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(1) > a').should('be.visible'); //Louer Option should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(2) > a').should('be.visible'); //Vendre Option should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(3) > a').should('be.visible'); //Gestion Locative Option should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(4) > a').should('be.visible'); //Syndic de copropriete Option should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(5) > a').should('be.visible'); //Louer decovrir Foncia should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(6) > a').should('be.visible'); //Louer Carrieres should be visible\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-content-links.p-d-flex.p-flex-column.p-flex-lg-row.p-ai-center > div:nth-child(7) > a').should('be.visible'); //button my Foncia should be exist\ncy.get('body > app-root > app-header > header > div.header-content.p-d-flex.p-flex-column.p-flex-lg-row.p-jc-end.p-ai-center.visible > div.header-foncia.w-100 > div.header-content-foncia.p-d-flex.p-jc-center.p-ai-center > div > app-foncia-button > a').should('be.visible'); //Exit Menu option\ncy.get('body > app-root > app-header > header > div.header-button.header-button-mobile > p-button > button > span.p-button-label.ng-star-inserted').click();",
+              "err": {},
+              "uuid": "78a7ce73-fb4f-41d8-b8d1-a0e773d401fe",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "FunctionalTest : check Image",
+              "fullTitle": "01_Homepage Verification FunctionalTest : check Image",
+              "timedOut": null,
+              "duration": 45,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Image is visible\ncy.get('body > app-root > app-home > div > app-home-profiles > div > div.content-container > app-foncia-card > div.card-cards > div.card-cards-img > div:nth-child(1) > img').should('be.visible');",
+              "err": {},
+              "uuid": "fe9d460f-5d15-4534-a79f-8abe912b7289",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Menu button",
+              "fullTitle": "01_Homepage Verification Check Menu button",
+              "timedOut": null,
+              "duration": 62,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Menu button exist\ncy.get('body > app-root > app-header > header > div.header-button.header-button-mobile > p-button > button > span.p-button-label.ng-star-inserted').should('be.visible');",
+              "err": {},
+              "uuid": "f27760d3-2a1e-4cdc-b53e-21f59fe4038c",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "FunctionalTest : check Cluster Rechercher un bien ",
+              "fullTitle": "01_Homepage Verification FunctionalTest : check Cluster Rechercher un bien ",
+              "timedOut": null,
+              "duration": 411,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Rechercher un bien must have \ncy.get('#search-bar > div > label:nth-child(2)').click();\ncy.get('#projectToggle').should('be.visible');\ncy.get('#propertyToggle').should('be.visible');\ncy.get('#price').should('be.visible');\ncy.get('#city').should('be.visible');",
+              "err": {},
+              "uuid": "997c6431-7d35-49de-982c-edac60c9e935",
+              "parentUUID": "47989843-7c60-4136-948c-08b4233e3ad8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "88415bfa-0f13-4dc2-a4c0-8cb7ad3f5936",
+            "77049eb1-c882-40bb-8457-8a77473c0508",
+            "78a7ce73-fb4f-41d8-b8d1-a0e773d401fe",
+            "fe9d460f-5d15-4534-a79f-8abe912b7289",
+            "f27760d3-2a1e-4cdc-b53e-21f59fe4038c",
+            "997c6431-7d35-49de-982c-edac60c9e935"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13336,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

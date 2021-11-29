@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-29T09:02:48.346Z",
+    "end": "2021-11-29T09:03:07.150Z",
+    "duration": 18804,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b07cded-88ac-499b-9a2b-527881d406e7",
+      "title": "",
+      "fullFile": "cypress/integration/TC03_SearchFunctionality.js",
+      "file": "cypress/integration/TC03_SearchFunctionality.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+          "title": "Enter Criterea ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visit fr.foncia.com",
+              "fullTitle": "Enter Criterea  visit fr.foncia.com",
+              "timedOut": null,
+              "duration": 12414,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://fr.foncia.com//'); //Remove gestion des Cookies popup\ncy.get('body > app-root > app-cookie-banner > div.cookie-container-cta > div > app-foncia-button > button').click();",
+              "err": {},
+              "uuid": "77524821-5551-4ba2-a184-e8a71150245a",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill property ",
+              "fullTitle": "Enter Criterea  Fill property ",
+              "timedOut": null,
+              "duration": 948,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#propertyToggle').click();\ncy.get('#search-bar > div > form:nth-child(3) > div > div:nth-child(2) > div.popup-form.dropdown-content.p-d-flex.p-jc-between.ng-star-inserted', {\n  timeout: 20\n}).should('be.visible').children().contains(criteria.Biens).click();",
+              "err": {},
+              "uuid": "f072b939-90b0-4b24-b005-0e8a88bb93b8",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill project",
+              "fullTitle": "Enter Criterea  Fill project",
+              "timedOut": null,
+              "duration": 703,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#projectToggle > p').click();\ncy.get('#search-bar > div > form.research-bar-tab.search-bar-form.w-100.p-d-none.ng-invalid.ng-dirty.ng-touched > div > div:nth-child(1) > div.popup-form.dropdown-content.p-d-flex.p-flex-column.ng-star-inserted', {\n  timeout: 10000\n}).should('be.visible').children().contains(criteria.Projet).click();",
+              "err": {},
+              "uuid": "98a38b4f-4a04-4d8e-ac5b-49f4bf1a3456",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill Price ",
+              "fullTitle": "Enter Criterea  Fill Price ",
+              "timedOut": null,
+              "duration": 433,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Wait until price area appear then put your price\ncy.get('#price', {\n  timeout: 20\n}).should('be.visible').type(criteria.Prix);",
+              "err": {},
+              "uuid": "479a0257-b9aa-4c6d-8ff6-21fc4527d99a",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill Location ",
+              "fullTitle": "Enter Criterea  Fill Location ",
+              "timedOut": null,
+              "duration": 1264,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#city').type('Paris');\ncy.get('#pr_id_1_list').contains(criteria.city).click();",
+              "err": {},
+              "uuid": "01016621-7deb-4872-a5c4-9dab9d933b06",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Submit searching ",
+              "fullTitle": "Enter Criterea  Submit searching ",
+              "timedOut": null,
+              "duration": 319,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#search-bar > div > form.research-bar-tab.search-bar-form.w-100.p-d-none.ng-dirty.ng-touched.ng-valid > div > div.button.p-col-12.p-md-4.p-xl-12.p-d-flex.p-ai-end > app-foncia-button > button').click();",
+              "err": {},
+              "uuid": "ff6aa57f-e981-40d6-94f9-73a55bff776b",
+              "parentUUID": "e8748950-fb52-42bf-a919-a5c161f85f8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77524821-5551-4ba2-a184-e8a71150245a",
+            "f072b939-90b0-4b24-b005-0e8a88bb93b8",
+            "98a38b4f-4a04-4d8e-ac5b-49f4bf1a3456",
+            "479a0257-b9aa-4c6d-8ff6-21fc4527d99a",
+            "01016621-7deb-4872-a5c4-9dab9d933b06",
+            "ff6aa57f-e981-40d6-94f9-73a55bff776b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16081,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

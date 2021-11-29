@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-29T09:54:41.272Z",
+    "end": "2021-11-29T09:54:49.491Z",
+    "duration": 8219,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a297cf62-8aa1-4bcf-beba-29bf4c6aada9",
+      "title": "",
+      "fullFile": "cypress/integration/TC01_FirstOnGoogleSearch.js",
+      "file": "cypress/integration/TC01_FirstOnGoogleSearch.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a997f695-716a-4a8c-981c-94f0fa59ba5f",
+          "title": "01_Test Case : Check Foncia is first on google Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search for Foncia",
+              "fullTitle": "01_Test Case : Check Foncia is first on google Search Search for Foncia",
+              "timedOut": null,
+              "duration": 3959,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Action : search on google for Foncia\ncy.visit('https://www.google.com/search?q=Foncia'); //Get first element\ncy.get('#search a') //Make an assertion should be our site\n.invoke('attr', 'href').should('eq', 'https://fr.foncia.com/').then(href => console.log(href));",
+              "err": {},
+              "uuid": "3d859222-3cad-4093-bf5a-1f80c093fa38",
+              "parentUUID": "a997f695-716a-4a8c-981c-94f0fa59ba5f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d859222-3cad-4093-bf5a-1f80c093fa38"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3959,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
